@@ -1,0 +1,60 @@
+<HTML>
+<head><script>
+
+<script type="text/javascript">
+    function validate()
+    {
+      
+      var name = document.getElementById("name");
+      var rd1 = document.getElementById("gender1")
+      var rd2 = document.getElementById("gender2")
+      if( name.value.trim() =="")
+      {
+        alert("No blank values allowed");
+        return false;
+      }
+
+      if(rd1.checked==false && rd2.checked == false)
+      {
+        alert("click on one radio button");
+        return false;
+      }
+
+    }
+  </script>
+<style>
+th, td {
+  padding: 15px;
+}
+
+body {background-color:MediumSeaGreen ;}
+</style>
+
+</head>
+<BODY >
+  <div>
+<center>
+<form name="form1" action="" method="POST">
+  <table >
+    <tr>
+      <th>
+         <h1> Patient Real Life Status</h1>
+      </th>
+    <tr>
+      <td>Userid <input type="text" name="patientid" id="patientid" ></td>
+    </tr>
+    <tr>
+      <td>Name &nbsp<input type="text" name="name" id="name"></td>
+  </tr>	
+  <tr> <td>Risk <input type="number" name="risk" id="risk"></td></tr>
+   <tr>
+    <td> <input type="radio" name="disease" id="gender1" value="female">Disease 
+    <input type="radio" name="disease" id="gender2" value="Male">No Disease</td>
+  </tr>
+   <tr><td>  <button onclick="validate()" type="submit"> Submit </button> </td></tr>
+ </table>
+</form>
+</center>
+</div>
+</BODY>
+</HTML>
